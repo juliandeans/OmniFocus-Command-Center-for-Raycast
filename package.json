@@ -1,0 +1,362 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "omnifocus-command-center",
+  "title": "OmniFocus Command Center",
+  "version": "1.0.0",
+  "description": "A keyboard-first OmniFocus command center for Raycast: navigate, search, capture, triage and manage tasks and projects.",
+  "icon": "extension-icon.png",
+  "author": "juliandeans",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Productivity",
+    "Applications"
+  ],
+  "keywords": [
+    "omnifocus",
+    "tasks",
+    "projects",
+    "inbox",
+    "raycast",
+    "productivity"
+  ],
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "commands": [
+    {
+      "name": "search-projects",
+      "title": "Open Project",
+      "subtitle": "OmniFocus",
+      "description": "Search active OmniFocus projects and open one directly.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "projectPrimaryAction",
+          "title": "Primary Project Action",
+          "description": "Choose what pressing Enter does for a selected project.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "Show Tasks",
+              "value": "showTasks"
+            },
+            {
+              "title": "Edit Project",
+              "value": "edit"
+            }
+          ]
+        },
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for tasks when browsing this project's tasks.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "open-omnifocus",
+      "title": "Open OmniFocus",
+      "subtitle": "OmniFocus",
+      "description": "Open built-in areas and custom perspectives.",
+      "mode": "view"
+    },
+    {
+      "name": "show-tasks",
+      "title": "Show Tasks",
+      "subtitle": "OmniFocus",
+      "description": "Choose a project and browse all of its tasks.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for a selected task.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "search-tasks",
+      "title": "Search Tasks",
+      "subtitle": "OmniFocus",
+      "description": "Search open OmniFocus tasks across projects and Inbox.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for a selected task.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "add-task",
+      "title": "Add Task",
+      "subtitle": "OmniFocus",
+      "description": "Create a task with project, tags, dates and note.",
+      "mode": "view"
+    },
+    {
+      "name": "add-multiple-tasks",
+      "title": "Add Multiple Tasks",
+      "subtitle": "OmniFocus",
+      "description": "Create one OmniFocus task per line in a chosen project or Inbox.",
+      "mode": "view"
+    },
+    {
+      "name": "quick-add-to-inbox",
+      "title": "Quick Add to Inbox",
+      "subtitle": "OmniFocus",
+      "description": "Create an Inbox task directly from Raycast.",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "type": "text",
+          "name": "todo",
+          "required": true,
+          "placeholder": "Task title"
+        }
+      ]
+    },
+    {
+      "name": "browse-by-tag",
+      "title": "Browse by Tag",
+      "subtitle": "OmniFocus",
+      "description": "Choose a tag and browse its open tasks.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for a selected task.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inbox",
+      "title": "Inbox",
+      "subtitle": "OmniFocus",
+      "description": "Process OmniFocus Inbox tasks from Raycast.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for a selected task.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            },
+            {
+              "title": "Complete / Reopen",
+              "value": "complete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "create-project",
+      "title": "Create Project",
+      "subtitle": "OmniFocus",
+      "description": "Create a project with folder, type, metadata and initial tasks.",
+      "mode": "view"
+    },
+    {
+      "name": "review-projects",
+      "title": "Review Projects",
+      "subtitle": "OmniFocus",
+      "description": "Browse projects whose review date is due.",
+      "mode": "view",
+      "preferences": [
+        {
+          "name": "projectPrimaryAction",
+          "title": "Primary Project Action",
+          "description": "Choose what pressing Enter does for a selected project.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "Show Tasks",
+              "value": "showTasks"
+            },
+            {
+              "title": "Edit Project",
+              "value": "edit"
+            }
+          ]
+        },
+        {
+          "name": "taskPrimaryAction",
+          "title": "Primary Task Action",
+          "description": "Choose what pressing Enter does for tasks when browsing this project's tasks.",
+          "type": "dropdown",
+          "required": false,
+          "default": "open",
+          "data": [
+            {
+              "title": "Open in OmniFocus",
+              "value": "open"
+            },
+            {
+              "title": "View Details",
+              "value": "details"
+            },
+            {
+              "title": "Edit Task",
+              "value": "edit"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "actionShortcutStyle",
+      "title": "Action Shortcut Style",
+      "description": "Modifier keys for direct task and project actions (Dates, Tags, Move, Subtask, Flag).",
+      "type": "dropdown",
+      "required": false,
+      "default": "option",
+      "data": [
+        {
+          "title": "Option",
+          "value": "option"
+        },
+        {
+          "title": "Command + Shift",
+          "value": "cmd_shift"
+        },
+        {
+          "title": "Control + Option",
+          "value": "ctrl_opt"
+        },
+        {
+          "title": "Off",
+          "value": "off"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.23",
+    "@raycast/utils": "^2.3.0"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-darwin-arm64": "^1.2.7",
+    "@rolldown/binding-darwin-x64": "^1.2.7"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.1.1",
+    "@types/node": "22.15.3",
+    "@types/react": "19.0.10",
+    "eslint": "^9.0.0",
+    "prettier": "^3.9.5",
+    "typescript": "5.8.3",
+    "vitest": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "validate": "npm test && npm run typecheck && npm run lint && npm run build"
+  }
+}

@@ -1,0 +1,107 @@
+name: Bug Report
+description: Report a problem or unexpected behavior in OmniFocus Command Center
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Important Privacy Notice
+        > **Do NOT include real or private OmniFocus task names, notes, client data, credentials, or personal information in your report or screenshots.**
+        > Please reproduce issues using disposable dummy data (e.g. `[TEST] Sample Task`).
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension Version or Git Commit
+      placeholder: "e.g., 1.0.0 or commit hash"
+    validations:
+      required: true
+
+  - type: input
+    id: raycast-version
+    attributes:
+      label: Raycast Version
+      placeholder: "e.g., 1.90.0 (Raycast → Settings → About)"
+    validations:
+      required: true
+
+  - type: input
+    id: omnifocus-version
+    attributes:
+      label: OmniFocus Version
+      placeholder: "e.g., 4.7.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: omnifocus-pro
+    attributes:
+      label: OmniFocus Pro Active?
+      description: Rich automation features require OmniFocus Pro.
+      options:
+        - "Yes (Pro)"
+        - "No (Standard)"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS Version
+      placeholder: "e.g., macOS 14.5 Sonoma"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: command-affected
+    attributes:
+      label: Affected Command
+      options:
+        - "Open Project (search-projects)"
+        - "Open OmniFocus (open-omnifocus)"
+        - "Show Tasks (show-tasks)"
+        - "Search Tasks (search-tasks)"
+        - "Add Task (add-task)"
+        - "Add Multiple Tasks (add-multiple-tasks)"
+        - "Quick Add to Inbox (quick-add-to-inbox)"
+        - "Browse by Tag (browse-by-tag)"
+        - "Inbox (inbox)"
+        - "Create Project (create-project)"
+        - "Review Projects (review-projects)"
+        - "Other / General"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Clear, step-by-step instructions using dummy data.
+      placeholder: |
+        1. Run Raycast command '...'
+        2. Enter '...'
+        3. Click '...'
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? (Include any sanitized error messages)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information (sanitized logs, terminal output from `npm run dev`, etc.).

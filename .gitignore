@@ -1,0 +1,9 @@
+node_modules/
+.build/
+.vitest/
+dist/
+release/
+raycast-env.d.ts
+.DS_Store
+*.log
+docs/

@@ -1,0 +1,32 @@
+name: Feature Request
+description: Suggest an enhancement or new feature for OmniFocus Command Center
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature! Please check existing issues first to avoid duplicates.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Workflow Gap
+      description: What problem are you trying to solve, or what workflow would this improve?
+      placeholder: "I find myself frequently needing to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the behavior or user experience you would like to see.
+      placeholder: "Add an action or command that..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or workarounds you have considered.
