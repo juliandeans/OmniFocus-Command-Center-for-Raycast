@@ -17,8 +17,8 @@ This is an open-source, community-driven Raycast extension designed for local in
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/juliandeans/Raycast-Omnifocus-Extension.git
-   cd Raycast-Omnifocus-Extension
+   git clone https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast.git
+   cd OmniFocus-Command-Center-for-Raycast
    ```
 
 2. Install dependencies:

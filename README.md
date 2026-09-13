@@ -34,10 +34,11 @@ This extension is hosted on GitHub and installed locally into Raycast.
 
 The prebuilt release is designed to be imported directly into Raycast without building the extension from source.
 
-1. Go to the [Latest GitHub Release](https://github.com/juliandeans/Raycast-Omnifocus-Extension/releases/latest).
-2. Download the prebuilt asset: [OmniFocus-Command-Center.zip](https://github.com/juliandeans/Raycast-Omnifocus-Extension/releases/latest/download/OmniFocus-Command-Center.zip).
+1. Go to the [Latest GitHub Release](https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast/releases/latest).
+2. Download the prebuilt asset: [OmniFocus-Command-Center.zip](https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast/releases/latest/download/OmniFocus-Command-Center.zip).
    > [!IMPORTANT]
    > Be sure to download `OmniFocus-Command-Center.zip` under **Assets**. Do **not** use GitHub's automatically generated `Source code (zip)`.
+   >
    > - `OmniFocus-Command-Center.zip` = ready-to-run prebuilt extension bundle for Raycast.
    > - GitHub `Source code (zip)` = raw uncompiled source code (requires Node/npm to build).
 3. Extract `OmniFocus-Command-Center.zip` on your Mac (producing an `OmniFocus-Command-Center` folder).
@@ -59,18 +60,20 @@ If you prefer building directly from source or contributing changes:
 2. Extract the archive on your Mac.
 3. Open **Terminal** in the extracted directory.
 4. Run:
+
    ```bash
    npm ci
    npm run dev
    ```
+
 5. Raycast detects and registers the extension locally.
 6. Press `Ctrl + C` in the Terminal to stop the development runner. The extension stays registered in Raycast.
 
 #### Option B — Git Clone
 
 ```bash
-git clone https://github.com/juliandeans/Raycast-Omnifocus-Extension.git
-cd Raycast-Omnifocus-Extension
+git clone https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast.git
+cd OmniFocus-Command-Center-for-Raycast
 npm ci
 npm run dev
 ```
@@ -236,7 +239,7 @@ Because this extension is installed from GitHub rather than the Raycast Store, u
 
 ### Prebuilt Installation (Recommended)
 
-1. Check [GitHub Releases](https://github.com/juliandeans/Raycast-Omnifocus-Extension/releases/latest) for new releases.
+1. Check [GitHub Releases](https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast/releases/latest) for new releases.
 2. Download and extract the latest `OmniFocus-Command-Center.zip`.
 3. In Raycast, run **`Import Extension`** and select the newly extracted folder.
 4. Raycast replaces the previous installation with the updated build.
@@ -249,7 +252,7 @@ Because this extension is installed from GitHub rather than the Raycast Store, u
 For Git checkouts:
 
 ```bash
-cd Raycast-Omnifocus-Extension
+cd OmniFocus-Command-Center-for-Raycast
 git pull
 npm ci
 npm run dev
@@ -262,10 +265,12 @@ For Source ZIP users:
 1. Download and extract the latest source ZIP from GitHub.
 2. Open Terminal in the new directory.
 3. Run:
+
    ```bash
    npm ci
    npm run dev
    ```
+
 4. Press `Ctrl + C` once Raycast finishes compiling.
 
 ---
