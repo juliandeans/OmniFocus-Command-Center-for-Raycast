@@ -6,4 +6,5 @@ release/
 raycast-env.d.ts
 .DS_Store
 *.log
-docs/
+docs/PLAN.md
+docs/RESEARCH.md
