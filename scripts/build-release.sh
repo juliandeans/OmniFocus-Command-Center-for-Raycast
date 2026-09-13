@@ -40,7 +40,7 @@ echo "==> Creating release archive: OmniFocus-Command-Center.zip..."
 echo "==> Generating SHA-256 checksum..."
 (
   cd "$RELEASE_DIR"
-  shasum -a 256 "OmniFocus-Command-Center.zip" > "SHA256SUMS.txt"
+  shasum -a 256 "OmniFocus-Command-Center.zip" >"SHA256SUMS.txt"
 )
 
 echo ""
