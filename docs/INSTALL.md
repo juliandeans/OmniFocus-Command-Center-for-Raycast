@@ -34,6 +34,7 @@ The prebuilt release is designed to be imported directly into Raycast without bu
 2. Download the prebuilt asset: [OmniFocus-Command-Center.zip](https://github.com/juliandeans/OmniFocus-Command-Center-for-Raycast/releases/latest/download/OmniFocus-Command-Center.zip).
    > [!IMPORTANT]
    > Make sure to download `OmniFocus-Command-Center.zip` under **Assets**. Do **not** use GitHub's automatic `Source code (zip)` archive.
+   >
    > - `OmniFocus-Command-Center.zip` = ready-to-run prebuilt extension bundle for Raycast.
    > - GitHub `Source code (zip)` = uncompiled source code (requires Node/npm to build).
 3. Extract `OmniFocus-Command-Center.zip` on your Mac (producing an `OmniFocus-Command-Center` folder).
